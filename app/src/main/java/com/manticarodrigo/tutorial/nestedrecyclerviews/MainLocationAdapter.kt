@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class MainTaskAdapter(val locationList: ArrayList<HashMap<String, String>>): RecyclerView.Adapter<MainTaskAdapter.ViewHolder>() {
+class MainLocationAdapter(val locationList: ArrayList<HashMap<String, String>>): RecyclerView.Adapter<MainLocationAdapter.ViewHolder>() {
 
-    override fun onBindViewHolder(holder: MainTaskAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MainLocationAdapter.ViewHolder, position: Int) {
         val location = locationList[position]
         holder.locationName?.text = location.get("name")
         holder.locationAddress?.text = location.get("address")
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainTaskAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainLocationAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_item_locations, parent, false)
         return ViewHolder(v)
     }

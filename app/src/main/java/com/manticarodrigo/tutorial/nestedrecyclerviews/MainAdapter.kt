@@ -22,7 +22,7 @@ class MainAdapter(val locationList: ArrayList<HashMap<String, String>>): Recycle
         // Create vertical Layout Manager
         holder.rv?.layoutManager = LinearLayoutManager(holder.rv.context, LinearLayout.VERTICAL, false)
         // Access RecyclerView Adapter and load the data
-        var adapter = MainTaskAdapter(dateList[position] as ArrayList<HashMap<String, String>>)
+        var adapter = MainLocationAdapter(dateList[position] as ArrayList<HashMap<String, String>>)
         holder.rv?.adapter = adapter
     }
 
